@@ -15,6 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::group(['prefix' => 'contact', 'middleware' => 'auth'], function() {
+Route::get('index', 'ContactFormController@index')->name('contact.index');
+Route::get('create', 'ContactFormController@create')->name('contact.create');
+});
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
