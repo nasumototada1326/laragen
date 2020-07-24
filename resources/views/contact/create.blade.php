@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">新規ユーザー登録</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,11 +13,19 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    
-                    createです。
-                    <form method="GET" action="{{route('contact.store')}}">
+
+                    @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @endif
+
+                    <form method="POST" action="{{route('contact.store')}}">
                     @csrf
-                    
                     氏名:
                     <input type="text" name="your_name">
                     <br>
