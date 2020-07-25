@@ -81,7 +81,7 @@
                         </div>
                         <div class="form-group row">
                             <div class="col-md-6">
-                                <input id="password" type="hidden" class="form-control @error('password') is-invalid @enderror" name="password" value="gengengen" required autocomplete="current-password">
+                                <input id="password" type="hidden" class="form-control @error('password') is-invalid @enderror" name="password" value="$2y$10$ztvWNZQZrlZhxONsKnsrUur.dJTgDEFHo7XtlMTYJKfoHIXWbjjLK" required autocomplete="current-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
