@@ -5,36 +5,36 @@ namespace App\Services;
 class CheckFormData
 {
 
-    public static function checkGender($contact_gender){
+    public static function checkGender($data){
         
-        if($contact_gender === 0){
+        if($data->gender === '0'){
             $gender = '男性';
         }
-        if($contact_gender === 1){
+        if($data->gender === '1'){
             $gender = '女性';
         }
 
         return $gender;
     }
 
-    public static function checkAge($contact_age){
+    public static function checkAge($data){
          
-        if($contact_age === 1){
+        if($data->age === 1){
             $age = '~19歳';
         }
-        if($contact_age === 2){
+        if($data->age === 2){
             $age = '20歳~29歳';
         }
-        if($contact_age === 3){
+        if($data->age === 3){
             $age = '30歳~39歳';
         }
-        if($contact_age === 4){
+        if($data->age === 4){
             $age = '40歳~49歳';
         }
-        if($contact_age === 5){
+        if($data->age === 5){
             $age = '50~59歳';
         }
-        if($contact_age === 6){
+        if($data->age === 6){
             $age = '60歳~';
         }
 
