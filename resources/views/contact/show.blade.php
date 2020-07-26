@@ -26,17 +26,12 @@
                     <div class="d-flex justify-content-start">
                     <form method="GET" action="{{route('contact.edit', ['id' => $contact->id ])}}">
                     @csrf
-                    <input class="btn btn-info" type="submit" value="登録する">
+                    <input class="btn btn-info" type="submit" value="登録する" padding: 10px;><br>
                     </form>
                     <form method="POST" action="{{route('contact.destroy', ['id' => $contact->id ])}}" id="delete_{{ $contact->id }}">
                     @csrf                    
-                    <a href="#" class="btn btn-danger" data-id="{{ $contact->id }}" onclick="deletePost(this);">削除する</a> 
+                    <a href="#" class="btn btn-danger" data-id="{{ $contact->id }}" onclick="deletePost(this);">削除する</a>
                     </form>
-                    <form method="GET" action="{{ route('contact.index') }}">
-                    @csrf
-                    <button type="submit" class="btn btn-primary">
-                        一覧に戻る
-                    </button>
                     </form>
                     </div>
                 </div>

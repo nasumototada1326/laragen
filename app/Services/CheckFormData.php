@@ -7,10 +7,10 @@ class CheckFormData
 
     public static function checkGender($data){
         
-        if($data->gender === '0'){
+        if($data->gender === 0){
             $gender = '男性';
         }
-        if($data->gender === '1'){
+        if($data->gender === 1){
             $gender = '女性';
         }
 
