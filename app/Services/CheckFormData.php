@@ -5,7 +5,7 @@ namespace App\Services;
 class CheckFormData
 {
 
-    public static function checkGender($data){
+    public static function CheckGender($data){
         
         if($data->gender === 0){
             $gender = '男性';
@@ -17,7 +17,7 @@ class CheckFormData
         return $gender;
     }
 
-    public static function checkAge($data){
+    public static function CheckAge($data){
          
         if($data->age === 1){
             $age = '~19歳';

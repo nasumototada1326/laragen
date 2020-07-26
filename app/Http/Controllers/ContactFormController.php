@@ -91,8 +91,8 @@ class ContactFormController extends Controller
     {
         $contact = ContactForm::find($id);
 
-        $gender = CheckFormData::checkGender($contact);
-        $age = CheckFormData::checkAge($contact);
+        $gender = CheckFormData::CheckGender($contact);
+        $age = CheckFormData::CheckAge($contact);
 
         return view('contact.show',
         compact('contact', 'gender', 'age'));
