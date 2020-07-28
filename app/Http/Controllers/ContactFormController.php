@@ -90,10 +90,10 @@ class ContactFormController extends Controller
     public function show($id)
     {
         $contact = ContactForm::find($id);
-
+        
         $gender = CheckFormData::checkGender($contact);
         $age = CheckFormData::checkAge($contact);
-        
+        dd($contact);
         
         return view('contact.show',
         compact('contact', 'gender', 'age'));
