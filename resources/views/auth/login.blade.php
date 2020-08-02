@@ -70,7 +70,7 @@
 
                         <div class="form-group row">
                             <div class="col-md-6">
-                                <input id="email" type="hidden" class="form-control @error('email') is-invalid @enderror" name="email" value="namo153@gmail.com" required autocomplete="email" autofocus>
+                                <input id="email" type="hidden" class="form-control @error('email') is-invalid @enderror" name="email" value="test1@gmail.com" required autocomplete="email" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -81,7 +81,7 @@
                         </div>
                         <div class="form-group row">
                             <div class="col-md-6">
-                                <input id="password" type="hidden" class="form-control @error('password') is-invalid @enderror" name="password" value="gengengen" required autocomplete="current-password">
+                                <input id="password" type="hidden" class="form-control @error('password') is-invalid @enderror" name="password" value="secret" required autocomplete="current-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
